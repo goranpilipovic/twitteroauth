@@ -1,10 +1,10 @@
 {       
     "name": "goranpilipovic/twitteroauth", 
     "type": "library",
-    "description": "The most popular PHP library for use with the Twitter OAuth REST API.",
+    "description": "My Fork of Abraham\Twitter OAuth REST API.",
     "keywords": ["twitter", "api", "oauth", "rest", "social", "twitter api", "twitter oauth"],
     "license": "MIT",
-    "homepage": "https://twitteroauth.com",
+    "homepage": "https://github.com/goranpilipovic/twitteroauth",
     "authors": [
         {
             "name": "Goran Pilipovic",
@@ -34,7 +34,7 @@
     },
     "autoload": {
         "psr-4": {
-            "goranpilipovic\\TwitterOAuth\\": "src"
+            "GoranPilipovic\\TwitterOAuth\\": "src"
         }
     }
 }
