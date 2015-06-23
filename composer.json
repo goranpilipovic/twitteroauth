@@ -1,11 +1,17 @@
 {       
-    "name": "abraham/twitteroauth", 
+    "name": "goranpilipovic/twitteroauth", 
     "type": "library",
     "description": "The most popular PHP library for use with the Twitter OAuth REST API.",
     "keywords": ["twitter", "api", "oauth", "rest", "social", "twitter api", "twitter oauth"],
     "license": "MIT",
     "homepage": "https://twitteroauth.com",
     "authors": [
+        {
+            "name": "Goran Pilipovic",
+            "email": "bluesman@utp-code.com",
+            "homepage": "http://goranpilipovic.com",
+            "role": "Developer"
+        },
         {
             "name": "Abraham Williams",
             "email": "abraham@abrah.am",
@@ -14,8 +20,8 @@
         }
     ],
     "support": {
-        "source": "https://github.com/abraham/twitteroauth",
-        "issues": "https://github.com/abraham/twitteroauth/issues"
+        "source": "https://github.com/goranpilipovic/twitteroauth",
+        "issues": "https://github.com/goranpilipovic/twitteroauth/issues"
     },
     "require": {
         "php": ">=5.4.0",
@@ -28,7 +34,7 @@
     },
     "autoload": {
         "psr-4": {
-            "Abraham\\TwitterOAuth\\": "src"
+            "goranpilipovic\\TwitterOAuth\\": "src"
         }
     }
 }
