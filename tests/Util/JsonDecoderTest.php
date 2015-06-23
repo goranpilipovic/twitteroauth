@@ -1,8 +1,8 @@
 <?php
 
-namespace Abraham\TwitterOAuth\Tests;
+namespace GoranPilipovic\TwitterOAuth\Tests;
 
-use Abraham\TwitterOAuth\Util\JsonDecoder;
+use GoranPilipovic\TwitterOAuth\Util\JsonDecoder;
 
 class JsonDecoderTest extends \PHPUnit_Framework_TestCase
 {

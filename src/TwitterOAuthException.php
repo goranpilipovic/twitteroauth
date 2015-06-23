@@ -1,6 +1,6 @@
 <?php
 
-namespace Abraham\TwitterOAuth;
+namespace GoranPilipovic\TwitterOAuth;
 
 /**
  * @author Abraham Williams <abraham@abrah.am>
