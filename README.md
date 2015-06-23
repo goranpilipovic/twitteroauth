@@ -1,10 +1,10 @@
-<span itemprop="name">TwitterOAuth</span> [![Build Status](https://img.shields.io/travis/abraham/twitteroauth.svg)](https://travis-ci.org/abraham/twitteroauth) [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/abraham/twitteroauth/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/abraham/twitteroauth/?branch=master) [![Issues Count](https://img.shields.io/github/issues/abraham/twitteroauth.svg)](https://github.com/abraham/twitteroauth/issues) [![Latest Version](https://img.shields.io/packagist/v/abraham/twitteroauth.svg)](https://packagist.org/packages/abraham/twitteroauth) [![Join the chat at https://gitter.im/abraham/twitteroauth](https://img.shields.io/badge/support-Gitter-brightgreen.svg)](https://gitter.im/abraham/twitteroauth)
+<span itemprop="name">TwitterOAuth</span>
 ------------
 
-<p itemprop="description">The most popular PHP library for Twitter's OAuth REST API.</p>
-
-See documentation at https://twitteroauth.com.
+<p itemprop="description">My Form of PHP library for Twitter's OAuth REST API. Basically forked to add one option to return raw json data instead of parsing but maybe I will add few more changes.</p>
 
 OAuth signing code originally sourced from [here](https://code.google.com/p/oauth/).
 
-<img src="https://raw.githubusercontent.com/abraham/twitteroauth-demo/master/images/twitter-logo-blue.png" itemprop="image" alt="Twitter bird" width="200px">
+Package repository at [Packagist](https://packagist.org/packages/goranpilipovic/twitteroauth)
+
+More info on [Twitter REST API](https://dev.twitter.com/rest/public).

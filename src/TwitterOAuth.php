@@ -15,9 +15,9 @@ use GoranPilipovic\TwitterOAuth\Util\JsonDecoder;
  */
 class TwitterOAuth extends Config
 {
-    const API_VERSION = '1.1';
-    const API_HOST = 'https://api.twitter.com';
-    const UPLOAD_HOST = 'https://upload.twitter.com';
+    const API_VERSION	= '1.1';
+    const API_HOST 		= 'https://api.twitter.com';
+    const UPLOAD_HOST	= 'https://upload.twitter.com';
 
     /** @var Response details about the result of the last request */
     private $response;
@@ -29,6 +29,8 @@ class TwitterOAuth extends Config
     private $token;
     /** @var HmacSha1 OAuth 1 signature type used by Twitter */
     private $signatureMethod;
+    
+    private $resultJson;
 
     /**
      * Constructor
@@ -156,11 +158,16 @@ class TwitterOAuth extends Config
         $method = 'POST';
         $this->resetLastResponse();
         $this->response->setApiPath($path);
+
         $url = sprintf('%s/%s', self::API_HOST, $path);
         $request = Request::fromConsumerAndToken($this->consumer, $this->token, $method, $url, $parameters);
         $authorization = 'Authorization: Basic ' . $this->encodeAppAuthorization($this->consumer);
+
         $result = $this->request($request->getNormalizedHttpUrl(), $method, $authorization, $parameters);
-        $response = JsonDecoder::decode($result, $this->decodeJsonAsArray);
+
+		// return response as JSON or decode it?
+        $response = $this->decodeJson ? JsonDecoder::decode($result, $this->decodeJsonAsArray) : $result;
+        
         $this->response->setBody($response);
         return $response;
     }
@@ -247,8 +254,11 @@ class TwitterOAuth extends Config
         $url = sprintf('%s/%s/%s.json', $host, self::API_VERSION, $path);
         $this->response->setApiPath($path);
         $result = $this->oAuthRequest($url, $method, $parameters);
-        $response = JsonDecoder::decode($result, $this->decodeJsonAsArray);
+		// return response as JSON or decode it?
+        $response = $this->decodeJson ? JsonDecoder::decode($result, $this->decodeJsonAsArray) : $result;
+        
         $this->response->setBody($response);
+        
         return $response;
     }
 

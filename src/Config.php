@@ -1,12 +1,13 @@
 <?php
-
-namespace GoranPilipovic\TwitterOAuth;
-
 /**
+ * TwitterOAuth base class
  * Handle setting and storing config for TwitterOAuth.
  *
+ * @author Goran Pilipovic  <bluesman@utp-code.com>
  * @author Abraham Williams <abraham@abrah.am>
  */
+namespace GoranPilipovic\TwitterOAuth;
+
 class Config
 {
     /** @var int How long to wait for a response from the API */
@@ -24,7 +25,13 @@ class Config
     /** @var string User-Agent header */
     protected $userAgent = 'TwitterOAuth (+https://twitteroauth.com)';
     /** @var array Store proxy connection details */
-    protected $proxy = array();
+    protected $proxy = [];
+    /**
+    * Decode JSON results or leave as is
+    * 
+    * @var bool
+    */
+    protected $decodeJson = true;
 
     /**
      * Set the connection and response timeouts.
@@ -44,6 +51,14 @@ class Config
     public function setDecodeJsonAsArray($value)
     {
         $this->decodeJsonAsArray = (bool)$value;
+    }
+
+    /**
+     * @param bool $value
+     */
+    public function setDecodeJson($value)
+    {
+        $this->decodeJson = (bool)$value;
     }
 
     /**
