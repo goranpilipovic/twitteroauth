@@ -1,7 +1,7 @@
 {       
     "name": "goranpilipovic/twitteroauth", 
     "type": "library",
-    "description": "My Fork of Abraham\Twitter OAuth REST API.",
+    "description": "My Fork of Abraham Twitter OAuth REST API.",
     "keywords": ["twitter", "api", "oauth", "rest", "social", "twitter api", "twitter oauth"],
     "license": "MIT",
     "homepage": "https://github.com/goranpilipovic/twitteroauth",
